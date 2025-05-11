@@ -1,2 +1,4 @@
-build/
-docs/html/
+build/*
+docs/html/*
+
+!.gitkeep
