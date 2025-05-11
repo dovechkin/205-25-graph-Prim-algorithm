@@ -1,0 +1,48 @@
+#---------------------------------------------------------------------------
+# Doxyfile 1.9.6 (для C++)
+#---------------------------------------------------------------------------
+
+# Проект
+PROJECT_NAME           = "Prim Algorithm by Ovechkin"
+PROJECT_NUMBER         = 1.0
+PROJECT_BRIEF          = "Реализация алгоритма построения минимального остовного дерева Прима на C++"
+# PROJECT_LOGO           = ./logo.png
+
+# Исходные файлы
+INPUT                  = ./src ./include
+RECURSIVE              = YES
+FILE_PATTERNS          = *.h *.hpp *.cpp *.md
+
+# Изображения и диаграммы
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+HAVE_DOT               = YES
+CLASS_DIAGRAMS         = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+
+# Форматы вывода
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+HTML_OUTPUT            = ./docs/html
+SEARCHENGINE           = YES
+
+# Опции для C++
+OPTIMIZE_OUTPUT_FOR_C  = NO
+SIP_SUPPORT            = NO
+CLANG_ASSISTED_PARSING = YES
+CPP_CLI_SUPPORT        = NO
+
+# Исключения
+# EXCLUDE                = ./src/legacy
+# EXCLUDE_PATTERNS       = */tests/* */third_party/*
+
+# Язык и кодировка
+OUTPUT_LANGUAGE        = English
+DOXYFILE_ENCODING      = UTF-8
+INPUT_ENCODING         = UTF-8
+
+# Прочее
+QUIET                  = NO
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
