@@ -87,7 +87,7 @@ void Handler::build_mst_handler(const Request& req, Response& res)
     }
     int start = request.value("start", 1);
 
-    json response;
+    json body;
     json mst_array = json::array();
 
     if (is_float_weights) {
@@ -125,9 +125,9 @@ void Handler::build_mst_handler(const Request& req, Response& res)
       }
     }
 
-    response["edges"] = mst_array;
+    body["edges"] = mst_array;
     res.status = 200;
-    res.set_content(response.dump(), "application/json");
+    res.set_content(body.dump(), "application/json");
   }
   catch (const json::exception& e) {
     res.status = 414;

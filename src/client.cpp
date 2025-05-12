@@ -3,9 +3,11 @@
 #include <filesystem>
 #include <fstream>
 #include <iostream>
-#include <json.hpp>S
+#include <json.hpp>
 #include <queue>
 #include <vector>
+
+const double EPS = 1e-10;
 
 using namespace std;
 using json = nlohmann::json;
@@ -13,7 +15,7 @@ using namespace httplib;
 namespace fs = std::filesystem;
 
 const string HOST = "localhost";  ///< Хост сервера по умолчанию
-const int PORT = 8080;  ///< Порт сервера по умолчанию
+const int PORT = 8080;            ///< Порт сервера по умолчанию
 const string TEST_INT_DIR =
     "data/integer";  ///< Директория с тестами для целых весов
 const string TEST_FLOAT_DIR =
@@ -31,7 +33,7 @@ const string TEST_FLOAT_DIR =
  * Последняя строка: total_weight - ожидаемый суммарный вес MST
  */
 template <typename T>
-void test(Client& client, Headers& headers, ifstream& file)
+void test(Client& client, Headers& headers, ifstream& file, T tolerance = 0)
 {
   int n, m, s;
   file >> n >> m >> s;
@@ -78,7 +80,7 @@ void test(Client& client, Headers& headers, ifstream& file)
     }
     cout << '\n';
 
-    if (ttl_weight == test_ttl_weight) {
+    if (abs(ttl_weight - test_ttl_weight) <= tolerance) {
       cout << "Веса совпадают!\n";
     }
     else {
@@ -107,7 +109,8 @@ void test(Client& client, Headers& headers, ifstream& file)
  * @throws exception Ошибка открытия файла
  */
 template <typename T>
-void test_set(Client& client, Headers& headers, const string& dir)
+void test_set(Client& client, Headers& headers, const string& dir,
+              T tolerance = 0)
 {
   for (const auto& entry : fs::directory_iterator(dir)) {
     if (entry.is_regular_file() && entry.path().extension() == ".txt") {
@@ -117,7 +120,7 @@ void test_set(Client& client, Headers& headers, const string& dir)
         throw new std::exception();
       }
 
-      test<T>(client, headers, file);
+      test<T>(client, headers, file, tolerance);
 
       file.close();
     }
@@ -142,7 +145,7 @@ int main()
     test_set<int>(client, headers, TEST_INT_DIR);
 
     // тесты с дробными весами
-    test_set<double>(client, headers, TEST_FLOAT_DIR);
+    test_set<double>(client, headers, TEST_FLOAT_DIR, EPS);
 
     client.stop();
   }

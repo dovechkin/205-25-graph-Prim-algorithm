@@ -12,8 +12,8 @@ namespace app {
  */
 template <typename T>
 struct Edge {
-  int u;  ///< Начальная вершина ребра (1-based индекс)
-  int v;  ///< Конечная вершина ребра (1-based индекс)
+  int u;     ///< Начальная вершина ребра
+  int v;     ///< Конечная вершина ребра
   T weight;  ///< Вес ребра
 
   /**

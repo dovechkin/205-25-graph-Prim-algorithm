@@ -58,14 +58,12 @@ vcpkg install graphviz
 
 1. Клонируйте репозиторий:
 
-// !! подставить нужный репозиторий
-
 ```bash
-git clone https://github.com/your-repo/mst-service.git
+git clone https://github.com/dovechkin/205-25-graph-Prim-algorithm
 cd mst-service
 ```
 
-1. Создайте директорию для сборки:
+1. Создайте директорию для сборки, если ее нет:
 
 ```bash
 mkdir build && cd build
@@ -83,7 +81,7 @@ cmake --build .
 ### Серверная часть
 
 ```bash
-./server & # & - чтобы запустилось в фоне
+./server & # & - чтобы запустилось в фоне. Можно потом использовать fg, чтобы прервать выполнение
 ```
 
 Сервер запустится на `http://localhost:8080`
