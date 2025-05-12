@@ -1,0 +1,5 @@
+<map id="test_set" name="test_set">
+<area shape="rect" id="Node000001" title="Тестирование набора графов из директории" alt="" coords="5,5,74,31"/>
+<area shape="rect" id="Node000002" href="$client_8cpp.html#a613291e2452566fe896b131fbe43f345" title="Тестирование одного графа" alt="" coords="122,5,165,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,16,106,16,106,21,74,21"/>
+</map>

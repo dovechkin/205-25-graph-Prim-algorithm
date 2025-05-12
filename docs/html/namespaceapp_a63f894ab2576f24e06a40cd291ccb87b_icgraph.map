@@ -1,0 +1,9 @@
+<map id="app::algorithm_prima" name="app::algorithm_prima">
+<area shape="rect" id="Node000001" title="Алгоритм Прима для поиска минимального остовного дерева" alt="" coords="475,13,618,38"/>
+<area shape="rect" id="Node000002" href="$classapp_1_1_handler.html#aade742446a2c2c0cd7e9c1b1a30d2565" title="Обработчик запроса для построения MST." alt="" coords="297,5,427,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="460,28,428,28,428,23,460,23"/>
+<area shape="rect" id="Node000003" href="$classapp_1_1_handler.html#a936bf9f08e16c86c9584f6d59b89dbae" title="Регистрация маршрутов сервера" alt="" coords="103,5,249,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="282,28,249,28,249,23,282,23"/>
+<area shape="rect" id="Node000004" href="$server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Главная функция сервера" alt="" coords="5,13,55,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,28,55,28,55,23,87,23"/>
+</map>

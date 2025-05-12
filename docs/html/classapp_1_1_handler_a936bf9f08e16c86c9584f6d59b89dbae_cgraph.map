@@ -1,0 +1,7 @@
+<map id="app::Handler::register_routes" name="app::Handler::register_routes">
+<area shape="rect" id="Node000001" title="Регистрация маршрутов сервера" alt="" coords="5,5,152,46"/>
+<area shape="rect" id="Node000002" href="$classapp_1_1_handler.html#aade742446a2c2c0cd7e9c1b1a30d2565" title="Обработчик запроса для построения MST." alt="" coords="200,5,330,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,23,184,23,184,28,152,28"/>
+<area shape="rect" id="Node000003" href="$namespaceapp.html#a63f894ab2576f24e06a40cd291ccb87b" title="Алгоритм Прима для поиска минимального остовного дерева" alt="" coords="378,13,520,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="330,23,362,23,362,28,330,28"/>
+</map>

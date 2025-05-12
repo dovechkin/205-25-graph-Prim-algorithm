@@ -1,0 +1,5 @@
+<map id="app::Handler::build_mst_handler" name="app::Handler::build_mst_handler">
+<area shape="rect" id="Node000001" title="Обработчик запроса для построения MST." alt="" coords="5,5,136,46"/>
+<area shape="rect" id="Node000002" href="$namespaceapp.html#a63f894ab2576f24e06a40cd291ccb87b" title="Алгоритм Прима для поиска минимального остовного дерева" alt="" coords="184,13,326,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,23,168,23,168,28,136,28"/>
+</map>
